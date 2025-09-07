@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-with open(r"D:\ML Projects\Car-Price-Prediction-Using-LR\car_price_model.pkl", "rb") as f:
+with open("car_price_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Load your dataset (for options in dropdowns)
