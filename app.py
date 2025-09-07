@@ -10,7 +10,9 @@ with open(model_path, "rb") as f:
 
 
 # Load your dataset (for options in dropdowns)
-df = pd.read_csv(r"D:\ML Projects\Car-Price-Prediction-Using-LR\car data.csv")
+csv_path = Path(__file__).parent / "car data.csv"
+df = pd.read_csv(csv_path)
+
 
 df.drop_duplicates(inplace=True)
 df['Brand'] = df['Car_Name'].apply(lambda x: x.split()[0])
