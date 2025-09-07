@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+from pathlib import Path
 
-with open("car_price_model.pkl", "rb") as f:
+model_path = Path(__file__).parent / "car_price_model.pkl"
+with open(model_path, "rb") as f:
     model = pickle.load(f)
+
 
 # Load your dataset (for options in dropdowns)
 df = pd.read_csv(r"D:\ML Projects\Car-Price-Prediction-Using-LR\car data.csv")
